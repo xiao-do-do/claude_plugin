@@ -316,7 +316,103 @@ git tag v1.0.0
 git push origin v1.0.0
 ```
 
-### 4. 提交到插件市场
+### 4. 更新和推送插件
+
+当你需要更新已发布的插件时，按照以下步骤操作：
+
+#### 4.1 修改插件文件
+
+根据需要修改插件的文件：
+- 添加或修改 agents、commands、skills 等
+- 更新功能和文档
+
+#### 4.2 更新版本号
+
+在 `plugin.json` 中更新版本号：
+
+```json
+{
+  "name": "my-plugin",
+  "description": "更新后的描述",
+  "version": "1.1.0",  // 从 1.0.0 升级到 1.1.0
+  "author": {
+    "name": "Your Name"
+  }
+}
+```
+
+版本号规则：
+- 主版本（1.x.x）：不兼容的重大变更
+- 次版本（x.1.x）：向后兼容的功能新增
+- 修订号（x.x.1）：向后兼容的问题修正
+
+#### 4.3 提交更改到 Git
+
+```bash
+# 添加所有更改到暂存区
+git add .
+
+# 创建提交（使用描述性的提交信息）
+git commit -m "$(cat <<'EOF'
+添加新功能或修复问题的描述
+
+- 详细说明1
+- 详细说明2
+- 详细说明3
+
+Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
+EOF
+)"
+```
+
+#### 4.4 推送到 GitHub
+
+```bash
+# 推送到远程仓库
+git push
+
+# 如果需要，创建新的版本标签
+git tag v1.1.0
+git push origin v1.1.0
+```
+
+#### 4.5 更新插件市场
+
+如果你的插件在插件市场中（如 claude_plugin），用户会自动获取更新：
+
+```bash
+# 用户可以使用以下命令更新插件
+/plugin marketplace update
+/plugin update plugin-name@marketplace-name
+```
+
+**完整示例**：
+
+```bash
+# 1. 修改文件后，查看更改
+git status
+git diff
+
+# 2. 添加并提交更改
+git add .
+git commit -m "添加 architect-agent 到 riper-5 插件
+
+- 创建 architect-agent.md：架构设计代理
+- 更新创新模式：集成 architect-agent 进行架构设计
+- 更新计划模式：基于架构设计细化实施规范
+- 升级版本到 1.1.0
+
+Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>"
+
+# 3. 推送到 GitHub
+git push
+
+# 4. 创建版本标签（可选）
+git tag v1.1.0
+git push origin v1.1.0
+```
+
+### 5. 提交到插件市场
 
 1. Fork [claude_plugin](https://github.com/xiao-do-do/claude_plugin) 仓库
 2. 在 `plugins/` 目录下添加你的插件
