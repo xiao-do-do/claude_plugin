@@ -1,8 +1,8 @@
 {
   "name": "riper-5",
-  "description": "RIPER-5 严格模式协议 - 研究/创新/计划/执行/审查",
-  "version": "1.0.0",
+  "description": "RIPER-5 严格模式协议 - 研究/创新/计划/执行/审查/测试，集成架构设计能力",
+  "version": "1.1.0",
   "author": {
-    "name": "User"
+    "name": "xiao-do-do"
   }
 }
