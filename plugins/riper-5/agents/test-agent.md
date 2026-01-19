@@ -16,12 +16,47 @@ color: green
 
 ## 测试方法论
 
-**1. 测试分析**
+**1. 语法检查（必须首先执行）**
+
+在执行任何功能测试之前，必须先进行语法检查和编译验证：
+
+**Python**：
+```bash
+# 编译检查
+python -m py_compile file.py
+# 或使用 mypy 进行类型检查
+mypy file.py
+```
+
+**TypeScript/JavaScript**：
+```bash
+# TypeScript 类型检查
+tsc --noEmit
+# ESLint 语法检查
+eslint src/
+```
+
+**Go**：
+```bash
+go build ./...
+```
+
+**Java**：
+```bash
+javac *.java
+```
+
+**Rust**：
+```bash
+cargo check
+```
+
+**2. 测试分析**
 - 分析需求和功能规格
 - 识别测试边界和关键路径
 - 确定测试优先级和风险区域
 
-**2. 测试设计技术**
+**3. 测试设计技术**
 - 等价类划分：将输入数据划分为有效和无效等价类
 - 边界值分析：测试边界条件（最小值、最大值、边界±1）
 - 决策表测试：覆盖所有条件组合
