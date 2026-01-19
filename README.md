@@ -13,21 +13,27 @@ Claude Code 插件可以扩展 Claude Code 的功能，提供自定义命令、�
 
 ## 安装插件
 
-### 从 Git 仓库安装
+### 方式1：从插件市场安装（推荐）
 
 ```bash
-# 安装单个插件
-claude-code plugin install https://github.com/xiao-do-do/claude_plugin/plugins/riper-5
+# 1. 添加插件市场
+/plugin marketplace add xiao-do-do/claude_plugin
 
-# 或者克隆整个仓库后本地安装
-git clone https://github.com/xiao-do-do/claude_plugin.git
-claude-code plugin install ./claude_plugin/plugins/riper-5
+# 2. 安装插件
+/plugin install riper-5@claude-plugin-market
 ```
 
-### 从本地目录安装
+### 方式2：本地测试安装
 
 ```bash
-claude-code plugin install /path/to/plugin
+# 克隆仓库
+git clone https://github.com/xiao-do-do/claude_plugin.git
+
+# 添加本地市场
+/plugin marketplace add ./claude_plugin
+
+# 安装插件
+/plugin install riper-5@claude-plugin-market
 ```
 
 ## 可用插件
