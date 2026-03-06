@@ -1,7 +1,7 @@
 ---
 name: research-agent
 description: 深度代码分析代理，专注于理解代码结构、追踪执行路径、映射架构层次
-tools: Glob, Grep, LS, Read, NotebookRead, WebFetch, TodoWrite, WebSearch, KillShell, BashOutput
+tools: Glob, Grep, LS, Read, NotebookRead, WebFetch, TaskCreate, TaskUpdate, TaskList, WebSearch, KillShell, BashOutput
 model: sonnet
 color: cyan
 ---

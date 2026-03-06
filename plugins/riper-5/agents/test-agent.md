@@ -1,7 +1,7 @@
 ---
 name: test-agent
 description: 测试设计代理，专注于设计全面的测试用例、执行API测试和端到端测试
-tools: Glob, Grep, LS, Read, NotebookRead, WebFetch, TodoWrite, WebSearch, Bash, mcp__chrome-devtools__take_snapshot, mcp__chrome-devtools__click, mcp__chrome-devtools__fill, mcp__chrome-devtools__navigate_page, mcp__chrome-devtools__take_screenshot, mcp__chrome-devtools__list_network_requests, mcp__chrome-devtools__get_network_request
+tools: Glob, Grep, LS, Read, NotebookRead, WebFetch, TaskCreate, TaskUpdate, TaskList, WebSearch, Bash, mcp__chrome-devtools__take_snapshot, mcp__chrome-devtools__click, mcp__chrome-devtools__fill, mcp__chrome-devtools__navigate_page, mcp__chrome-devtools__take_screenshot, mcp__chrome-devtools__list_network_requests, mcp__chrome-devtools__get_network_request
 model: sonnet
 color: green
 ---

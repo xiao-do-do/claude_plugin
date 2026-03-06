@@ -1,7 +1,7 @@
 ---
 name: architect-agent
 description: 架构设计代理，分析代码库模式并提供架构方案和设计决策
-tools: Glob, Grep, LS, Read, NotebookRead, WebFetch, TodoWrite, WebSearch, KillShell, BashOutput
+tools: Glob, Grep, LS, Read, NotebookRead, WebFetch, TaskCreate, TaskUpdate, TaskList, WebSearch, KillShell, BashOutput
 model: sonnet
 color: blue
 ---

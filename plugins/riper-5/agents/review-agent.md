@@ -1,7 +1,7 @@
 ---
 name: review-agent
 description: 审查代理，专注于验证实施与计划的符合程度，检测偏差，确保代码质量
-tools: Glob, Grep, LS, Read, NotebookRead, WebFetch, TodoWrite, WebSearch, KillShell, BashOutput
+tools: Glob, Grep, LS, Read, NotebookRead, WebFetch, TaskCreate, TaskUpdate, TaskList, WebSearch, KillShell, BashOutput
 model: sonnet
 color: red
 ---
